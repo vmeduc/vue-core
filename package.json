@@ -1,0 +1,11 @@
+{
+  "name": "vue-core",
+  "version": "1.0.0",
+  "description": "Learning Vue.js core project",
+  "main": "main.js",
+  "scripts": {
+    "test": "-"
+  },
+  "author": "Vlad Melekhin",
+  "license": "ISC"
+}
