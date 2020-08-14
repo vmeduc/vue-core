@@ -1,10 +1,14 @@
 Vue.component('MyForm', {
     template: 
-        '<form>' +  
-            '<input type="text" v-model="text">' +
-            '<input type="submit" @click="submit">' +
-        '</form>',
-    props: ['submit', 'text']
+        '<div>' +
+            '<form>' +  
+                '<input type="text" v-model="text">' +
+                '<input type="submit" @click="submit">' +
+            '</form>' +
+            '<p>Message: {{ message }}</p>' +
+            '<p>Reverse message: {{ reverse }}</p>'+
+        '</div>',
+    props: ['submit', 'text', 'message', 'reverse']
 })
 
 let vm = new Vue({
@@ -19,9 +23,13 @@ let vm = new Vue({
         submit() {
             alert('submit')
         }
-    }
-})
+    },
+    computed: {
+        reverse() {
+            return this.message.split('').reverse().join('')
+        }
+    },
+    watch: {
 
-vm.$watch('text', (newValue, oldValue) => {
-    alert('text changed:')
+    }
 })
