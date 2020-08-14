@@ -1,3 +1,8 @@
-import '../styles/style.css'
+import Vue from 'vue'
 
-alert('hello main.js')
+import App from './pages/App.vue'
+
+let vm = new Vue({
+    el: '#app',
+    render: a => a(App)
+})
