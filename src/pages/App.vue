@@ -1,17 +1,19 @@
 <template>
     <div id="app">
-        <login/>
+        <navi/>
+        <router-view/>
     </div>
 </template>
 
 <script>
-import '../../styles/style.css'
+import 'styles/style.css';
 
-import Login from './Login.vue'
+import Navi from 'pages/Navi.vue';
 
 export default {
+    name: 'App',
     components: {
-        Login
+        Navi
     }
 }
 </script>

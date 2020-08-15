@@ -40,5 +40,13 @@ module.exports = {
                 ]
             }
         ]
+    },
+    resolve: {
+        modules: [
+            'node_modules',
+            'styles',
+            'src',
+            __dirname
+        ]
     }
 }
