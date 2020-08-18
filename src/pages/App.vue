@@ -1,21 +1,17 @@
 <template>
-    <div id="app">
-        <login/>
-    </div>
+  <div id="app">
+    <router-view/>
+  </div>
 </template>
 
 <script>
-import '../../styles/style.css'
-
-import Login from './Login.vue'
-
 export default {
-    components: {
-        Login
-    }
+  name: 'App'
 }
 </script>
 
-<style>
-
+<style scope>
+  #app {
+    text-align: center;
+  }
 </style>
