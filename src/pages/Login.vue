@@ -16,8 +16,22 @@
 </template>
 
 <script>
-export default {};
+export default {
+    name: 'Login',
+    data() {
+        return {
+            username: '',
+            password: ''
+        }   
+    },
+    methods: {
+        setUser() {
+            this.$store.commit('setUser', [this.username, this.password]);
+        }
+    }
+}
 </script>
 
 <style scoped>
+
 </style>

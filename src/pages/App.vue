@@ -1,13 +1,19 @@
 <template>
   <div id="app">
+    <navi/>
     <router-view/>
   </div>
 </template>
 
 <script>
+import Navi from 'pages/Navi.vue';
+
 export default {
-  name: 'App'
-}
+  name: 'App',
+  components: {
+    Navi
+  }
+};
 </script>
 
 <style scope>
