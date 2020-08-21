@@ -12,6 +12,9 @@ export default {
   name: 'App',
   components: {
     Navi
+  },
+  beforeMount() {
+    this.$store.dispatch('init')
   }
 };
 </script>

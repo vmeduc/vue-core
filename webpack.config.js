@@ -1,6 +1,6 @@
-const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const { VueLoaderPlugin } = require('vue-loader')
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { VueLoaderPlugin } = require('vue-loader');
 
 module.exports = {
     entry: './src/main.js',
@@ -17,7 +17,8 @@ module.exports = {
     ],
     devServer: {
         contentBase: './public',
-        port: 8000
+        port: 8000,
+        historyApiFallback: true
     },
 
     module: {
@@ -48,4 +49,4 @@ module.exports = {
             'src'
         ]
     }
-}
+};
