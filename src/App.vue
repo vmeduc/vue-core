@@ -6,6 +6,7 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
 import Navi from 'pages/Navi.vue';
 
 export default {
@@ -13,8 +14,11 @@ export default {
   components: {
     Navi
   },
+  methods: {
+    ...mapActions(['init'])
+  },
   beforeMount() {
-    this.$store.dispatch('init')
+    this.init();
   }
 };
 </script>

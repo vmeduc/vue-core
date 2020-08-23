@@ -3,6 +3,8 @@ import VueRouter from 'vue-router';
 
 import Dashboard from 'pages/Dashboard.vue';
 import About from 'pages/About.vue';
+import AboutThis from 'pages/AboutThis.vue';
+import AboutThat from 'pages/AboutThat.vue';
 import Login from 'pages/Login.vue';
 import Messages from 'pages/Messages.vue';
 
@@ -16,7 +18,18 @@ const routes = [
     },
     {
         path: "/about",
-        component: About
+        component: About,
+        children: [
+            {
+                path: "/about/this",
+                component: AboutThis
+            },
+            {
+                path: "/about/that",
+                component: AboutThat
+            }
+
+        ]
     },
     {
         path: "/login",
