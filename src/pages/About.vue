@@ -8,8 +8,12 @@
 </template>
 
 <script>
+import {myMixin} from 'mixins.js';
+
 export default {
-    name: 'About'
+    name: 'About',
+    mixins: [myMixin],
+    myOptions: 'ontion in "About" - about hello'
 }
 </script>
 

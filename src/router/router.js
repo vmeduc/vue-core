@@ -27,6 +27,10 @@ const routes = [
             {
                 path: "/about/that",
                 component: AboutThat
+            },
+            {
+                path: "*",
+                component: About
             }
 
         ]
