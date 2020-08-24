@@ -19,6 +19,7 @@ export default {
   },
   beforeMount() {
     this.init();
+    this.$log.success('Успешно', 'Логгер работает успешно');
   }
 };
 </script>

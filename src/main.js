@@ -3,14 +3,12 @@ import Vue from 'vue';
 import App from 'App.vue';
 import router from 'router/router.js';
 import store from 'store';
-import {mixinOptions} from 'mixins.js';
 
+import {mxStoreOptions} from 'mixins.js';
+import {myLogger} from 'plugins.js';
 
-Vue.mixin(mixinOptions);
-
-new Vue({
-    myOption: 'hello'
-})
+Vue.use(myLogger);
+Vue.mixin(mxStoreOptions);
 
 let vm = new Vue({
     el: '#app',

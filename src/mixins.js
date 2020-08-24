@@ -18,3 +18,14 @@ export let mixinOptions = {
     }
   }
 };
+
+export let mxStoreOptions = {
+  created() {
+    let myOption = this.$store.state.soneOption;
+    if (myOption) {
+      console.log('myOption is true!')
+    } else {
+      console.log('myOption is false!')
+    }
+  }
+};

@@ -7,6 +7,9 @@ import messenger from 'store/messenger';
 Vue.use(Vuex);
 
 const store = new Vuex.Store({
+  store: {
+    someOptions: false
+  },
   modules: {
     messenger
   }
